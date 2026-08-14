@@ -185,6 +185,20 @@ body {
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
+/* Mobile performance: disable continuous/infinite animations on small screens
+   to reduce persistent GPU compositing load on mobile devices. */
+@media (max-width: 767px) {
+  .animate-pulse,
+  .animate-pulse-glow {
+    animation: none !important;
+  }
+
+  .animate-ping {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
