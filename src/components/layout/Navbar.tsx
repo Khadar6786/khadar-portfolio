@@ -9,8 +9,8 @@ import { personalInfo } from "@/data/portfolioData";
 
 const navLinks = [
   { name: "About", href: "/#about" },
-  { name: "Skills", href: "/#skills" },
   { name: "Focus", href: "/#focus" },
+  { name: "Skills", href: "/#skills" },
   { name: "Projects", href: "/#projects" },
   { name: "Education", href: "/#education" },
   { name: "Contact", href: "/#contact" }
@@ -26,7 +26,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Active section detection
-      const sections = ["about", "skills", "focus", "projects", "education", "contact"];
+      const sections = ["about", "focus", "skills", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 180;
 
       for (let i = sections.length - 1; i >= 0; i--) {
